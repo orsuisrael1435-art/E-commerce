@@ -8,7 +8,7 @@ const productRoute = require('./routes/productroute')
 connectDb()
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({ origin: "https://e-commerce-v2v2.vercel.app" }))
 app.use('/api/products', productRoute)
 
 app.listen(process.env.PORT, () => {
